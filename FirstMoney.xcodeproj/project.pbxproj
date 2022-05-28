@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B420D4D128384B0A0073235A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B420D4D028384B0A0073235A /* .gitignore */; };
+		B420D4D3284259C60073235A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B420D4D2284259C60073235A /* CustomTableViewCell.swift */; };
 		B45D4981283523310032FABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D4980283523310032FABD /* AppDelegate.swift */; };
 		B45D4983283523310032FABD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D4982283523310032FABD /* SceneDelegate.swift */; };
 		B45D4985283523310032FABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D4984283523310032FABD /* ViewController.swift */; };
 		B45D4988283523310032FABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45D4986283523310032FABD /* Main.storyboard */; };
 		B45D498A283523330032FABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D4989283523330032FABD /* Assets.xcassets */; };
 		B45D498D283523330032FABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45D498B283523330032FABD /* LaunchScreen.storyboard */; };
+		EC8F7787009A4412A989373A /* Pods_FirstMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CF2C7D81C5D5E7BD9421E2 /* Pods_FirstMoney.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E488BE69AA4BC9443B5AFEA /* Pods-FirstMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMoney.release.xcconfig"; path = "Target Support Files/Pods-FirstMoney/Pods-FirstMoney.release.xcconfig"; sourceTree = "<group>"; };
+		81594C44AF0D0032160172BA /* Pods-FirstMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMoney.debug.xcconfig"; path = "Target Support Files/Pods-FirstMoney/Pods-FirstMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		86CF2C7D81C5D5E7BD9421E2 /* Pods_FirstMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B420D4D028384B0A0073235A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B420D4D2284259C60073235A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		B45D497D283523310032FABD /* FirstMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45D4980283523310032FABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B45D4982283523310032FABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,18 +39,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8F7787009A4412A989373A /* Pods_FirstMoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20A30113D742B05E78BD3B6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81594C44AF0D0032160172BA /* Pods-FirstMoney.debug.xcconfig */,
+				5E488BE69AA4BC9443B5AFEA /* Pods-FirstMoney.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		76E7EA744DCC883F1912A746 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86CF2C7D81C5D5E7BD9421E2 /* Pods_FirstMoney.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B45D4974283523310032FABD = {
 			isa = PBXGroup;
 			children = (
 				B420D4D028384B0A0073235A /* .gitignore */,
 				B45D497F283523310032FABD /* FirstMoney */,
 				B45D497E283523310032FABD /* Products */,
+				20A30113D742B05E78BD3B6D /* Pods */,
+				76E7EA744DCC883F1912A746 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +89,7 @@
 				B45D4980283523310032FABD /* AppDelegate.swift */,
 				B45D4982283523310032FABD /* SceneDelegate.swift */,
 				B45D4984283523310032FABD /* ViewController.swift */,
+				B420D4D2284259C60073235A /* CustomTableViewCell.swift */,
 				B45D4986283523310032FABD /* Main.storyboard */,
 				B45D4989283523330032FABD /* Assets.xcassets */,
 				B45D498B283523330032FABD /* LaunchScreen.storyboard */,
@@ -77,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B45D4991283523330032FABD /* Build configuration list for PBXNativeTarget "FirstMoney" */;
 			buildPhases = (
+				4F7AEEAD7F18C12894B199A8 /* [CP] Check Pods Manifest.lock */,
 				B45D4979283523310032FABD /* Sources */,
 				B45D497A283523310032FABD /* Frameworks */,
 				B45D497B283523310032FABD /* Resources */,
+				9B04E9ADFDCB6C9D2E623589 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +167,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F7AEEAD7F18C12894B199A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirstMoney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B04E9ADFDCB6C9D2E623589 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstMoney/Pods-FirstMoney-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstMoney/Pods-FirstMoney-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirstMoney/Pods-FirstMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B45D4979283523310032FABD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +216,7 @@
 			files = (
 				B45D4985283523310032FABD /* ViewController.swift in Sources */,
 				B45D4981283523310032FABD /* AppDelegate.swift in Sources */,
+				B420D4D3284259C60073235A /* CustomTableViewCell.swift in Sources */,
 				B45D4983283523310032FABD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +359,7 @@
 		};
 		B45D4992283523330032FABD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81594C44AF0D0032160172BA /* Pods-FirstMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +388,7 @@
 		};
 		B45D4993283523330032FABD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E488BE69AA4BC9443B5AFEA /* Pods-FirstMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
