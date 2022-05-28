@@ -28,17 +28,21 @@ class ViewController: UIViewController {
     @IBAction func numberPressed(_ sender: UIButton) {
         
         if let number = sender.currentTitle {
-            if stillTyping {
-                if displayLabel.text!.count < 13 {
-                    displayLabel.text = displayLabel.text! + number
-                }else{
-                    return}
+            if number == "0" && displayLabel.text == "0" {
+                stillTyping = false
             }else {
-                displayLabel.text = number
-                stillTyping = true
+                if stillTyping {
+                    if displayLabel.text!.count < 13  {
+                        displayLabel.text = displayLabel.text! + number
+                    }else{
+                        return}
+                }else {
+                    
+                    displayLabel.text = number
+                    stillTyping = true
+                }
             }
-        } else {
-            return}
+        }
     }
     @IBAction func resetButton(_ sender: UIButton) {
         displayLabel.text = "0"
@@ -63,6 +67,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-
+    
 }
 
