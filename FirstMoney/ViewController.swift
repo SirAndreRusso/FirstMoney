@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet var numberFromKeyboard: [UIButton]!{
         didSet{
@@ -17,13 +19,15 @@ class ViewController: UIViewController {
         }
     }
     @IBOutlet weak var tableView: UITableView!
+    let realm = try! Realm()
     var stillTyping = false
     var categoryName = ""
-    var displayValue = ""
+    var displayValue: Int = 1
+    var spendingArray: Results<Spending>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        spendingArray = realm.objects(Spending.self)
     }
     @IBAction func numberPressed(_ sender: UIButton) {
         
@@ -50,23 +54,39 @@ class ViewController: UIViewController {
     }
     @IBAction func categoryPressed(_ sender: UIButton) {
         categoryName = sender.currentTitle!
-        displayValue = displayLabel.text!
+        displayValue = Int(displayLabel.text!)!
         displayLabel.text = "0"
         stillTyping = false
-        print(categoryName)
-        print(displayValue)
+        
+        let value = Spending(value: ["\(categoryName)", displayValue])
+        try! realm.write{
+            realm.add(value)
+        }
+        tableView.reloadData()
     }
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return spendingArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        var spending = spendingArray[indexPath.row]
+        cell.recordCategory.text = spending.category
+        cell.recordCost.text = "\(spending.cost)"
         return cell
     }
-    
+    private func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction] {
+        let editingRow = spendingArray[indexPath.row]
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Удалить") {(_,_) in
+            try! self.realm.write{
+                self.realm.delete(editingRow)
+                tableView.reloadData()
+            }
+        }
+        return[deleteAction]
+    }
     
 }
 

@@ -15,6 +15,7 @@
 		B45D4988283523310032FABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45D4986283523310032FABD /* Main.storyboard */; };
 		B45D498A283523330032FABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45D4989283523330032FABD /* Assets.xcassets */; };
 		B45D498D283523330032FABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45D498B283523330032FABD /* LaunchScreen.storyboard */; };
+		B4CCAC192843F366003237EC /* SpendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCAC182843F366003237EC /* SpendingModel.swift */; };
 		EC8F7787009A4412A989373A /* Pods_FirstMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CF2C7D81C5D5E7BD9421E2 /* Pods_FirstMoney.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		B45D4989283523330032FABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45D498C283523330032FABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B45D498E283523330032FABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4CCAC182843F366003237EC /* SpendingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				81594C44AF0D0032160172BA /* Pods-FirstMoney.debug.xcconfig */,
 				5E488BE69AA4BC9443B5AFEA /* Pods-FirstMoney.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,6 +90,7 @@
 				B45D4980283523310032FABD /* AppDelegate.swift */,
 				B45D4982283523310032FABD /* SceneDelegate.swift */,
 				B45D4984283523310032FABD /* ViewController.swift */,
+				B4CCAC182843F366003237EC /* SpendingModel.swift */,
 				B420D4D2284259C60073235A /* CustomTableViewCell.swift */,
 				B45D4986283523310032FABD /* Main.storyboard */,
 				B45D4989283523330032FABD /* Assets.xcassets */,
@@ -217,6 +219,7 @@
 				B45D4985283523310032FABD /* ViewController.swift in Sources */,
 				B45D4981283523310032FABD /* AppDelegate.swift in Sources */,
 				B420D4D3284259C60073235A /* CustomTableViewCell.swift in Sources */,
+				B4CCAC192843F366003237EC /* SpendingModel.swift in Sources */,
 				B45D4983283523310032FABD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
