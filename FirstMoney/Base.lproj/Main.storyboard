@@ -277,7 +277,7 @@
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="qI8-7F-G88">
-                                <rect key="frame" x="20" y="429" width="388" height="265.66666666666674"/>
+                                <rect key="frame" x="20" y="444.33333333333331" width="388" height="250.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyM-ie-yBc">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="67.666666666666671"/>
@@ -432,34 +432,6 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="1tP-nb-3hR"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="2rY-U2-14h"/>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="1WI-4h-NN6">
-                                <rect key="frame" x="20" y="393" width="388" height="36"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Все расходы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-VI-m0c">
-                                        <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="36"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQe-MK-oDq">
-                                        <rect key="frame" x="146.66666666666666" y="0.0" width="14.333333333333343" height="36"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                        <color key="textColor" red="1" green="0.6934033718" blue="0.39266100269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyY-l8-rvm">
-                                        <rect key="frame" x="187" y="0.0" width="201" height="36"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Установить лимит">
-                                            <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                            <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="limitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQ2-EB-dAa"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d4h-Ih-8pR">
                                 <rect key="frame" x="0.0" y="694.66666666666663" width="428" height="231.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -508,6 +480,39 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="CXF-ev-2aA"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="1WI-4h-NN6">
+                                <rect key="frame" x="20" y="393" width="388" height="51.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oRC-Ru-lMB">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="51.333333333333336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Все расходы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-VI-m0c">
+                                                <rect key="frame" x="0.0" y="0.0" width="104" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQe-MK-oDq">
+                                                <rect key="frame" x="0.0" y="24" width="12.333333333333334" height="27.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyY-l8-rvm">
+                                        <rect key="frame" x="222.33333333333337" y="0.0" width="165.66666666666663" height="51.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Установить лимит">
+                                            <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="limitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQ2-EB-dAa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -525,6 +530,7 @@
                             <constraint firstAttribute="bottom" secondItem="d4h-Ih-8pR" secondAttribute="bottom" id="NDd-vr-v42"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3UP-NI-hcd" secondAttribute="trailing" constant="27" id="Vjb-qV-YVW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1WI-4h-NN6" secondAttribute="trailing" constant="20" id="XrB-pV-kK6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XyY-l8-rvm" secondAttribute="trailing" constant="20" id="ZbW-lt-crS"/>
                             <constraint firstItem="1WI-4h-NN6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="azc-KI-PdG"/>
                             <constraint firstItem="Tg5-6F-gHq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d0s-MH-fN7"/>
                             <constraint firstAttribute="trailing" secondItem="d4h-Ih-8pR" secondAttribute="trailing" id="gQf-Uj-kAA"/>
@@ -537,7 +543,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="F_ckTheMoney" id="EXA-r2-2wp"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="allSpendings" destination="eQe-MK-oDq" id="u8v-XM-NY0"/>
                         <outlet property="availableMoney" destination="TaD-er-c9C" id="H2t-ZY-vpv"/>
                         <outlet property="displayLabel" destination="3UP-NI-hcd" id="kNf-Mw-e9F"/>
                         <outlet property="limitLabel" destination="BsT-hs-BMo" id="k0k-bR-qao"/>
@@ -610,6 +618,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

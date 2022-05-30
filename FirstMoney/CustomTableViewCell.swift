@@ -10,5 +10,5 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var recordCategory: UILabel!
     @IBOutlet weak var recordCost: UILabel!
-    @IBOutlet weak var recordImage: UIImageView!
+//    @IBOutlet weak var recordImage: UIImageView!
 }
